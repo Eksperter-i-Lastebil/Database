@@ -16,7 +16,7 @@ def db_insert(idn, latitude, longitude, timestamp):
 
 def db_newtrip(plowtype, idn):
     with transaction(db_trips) as tr:
-        tr.insert({'type' : plowtype})
+        tr.insert({'id' : idn,'type' : plowtype})
 
 def db_getpoints():
     data = []
