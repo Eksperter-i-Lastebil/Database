@@ -22,11 +22,10 @@ def db_getpoints():
     data = []
     for trip in db_trips.all():
         item = trip
-        item["points"]=db_gettrip(trip.doc_id)
+        item["points"]=db_gettrip(trip.get('id'))
         data.append(item)
 
     return (json.dumps(data))
 
 def db_gettrip(trip_id):
     return (db_points.search(Pos.id == trip_id))
-
