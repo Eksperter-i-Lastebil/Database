@@ -1,2 +1,3 @@
 # Database
-Database ting
+pip3 install tinydb
+pip3 install tinyrecord
